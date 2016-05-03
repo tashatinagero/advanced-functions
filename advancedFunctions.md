@@ -128,11 +128,13 @@ var range = [1,2,3,4,5,6];
 
 var oddOrEven = function(array){
   for (var i = 0; i < array.length; i++){
-    array[i] = ifThen(isEven, evenString, oddString, array[i]); 
+    array[i] = ifThen(isEven, double, triple, array[i]); 
   }
+
+  return array; 
 }
 
-oddOrEven(range)//[3, 4, 9, 8', 15, 12']
+oddOrEven(range)//[3, 4, 9, 8, 15, 12]
 ```
 
 
