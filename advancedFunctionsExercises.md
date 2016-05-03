@@ -108,7 +108,7 @@ Include the [Underscore library](http://underscorejs.org/) in an empty HTML do
    input: 'abcdc'
    output: 'c'
 
-   input: "occurring"'
+   input: "occurring"
    output: "cr"
    ```
 

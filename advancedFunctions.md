@@ -113,35 +113,41 @@ Here's another example:
 
 ```javascript
 var ifThen = function(condition, isTrue, isFalse, arg){
-  if(condition (arg)){
-    isTrue(arg);
+  if(condition(arg)){
+    return isTrue(arg);
   } else {
-    isFalse(arg);
+    return isFalse(arg);
   }
 };
 
-var condition = function(number){ return number % 2 === 0 };
-var isTrue = function(number){ return "even" };
-var isFalse = function(number){ return "odd"};
+var isEven = function(number){ return number % 2 === 0 };
+var double = function(number){ return number * 2 };
+var triple = function(number){ return number * 3};
+
+var range = [1,2,3,4,5,6]; 
 
 var oddOrEven = function(array){
   for (var i = 0; i < array.length; i++){
-  	array[i] = ifThen(number); 
+    array[i] = ifThen(isEven, evenString, oddString, array[i]); 
   }
 }
 
+oddOrEven(range)//[3, 4, 9, 8', 15, 12']
 ```
 
 
 
-Let's refactor the last bit of code using forEach. forEach is chained to an array and takes one callback function as an argument.  The callback is called at each iteration with the current element of the array. 
+Let's take an example using forEach.  forEach is a native method of arrays that takes a callback function as an argument. The callback is called at each iteration with the current element of the array.  *Note* The callback is also passed the index and collection as optional arguments. 
 
 ```javascript
 array.forEach(callback); 
 
 var range = [1,2,3,4,5,6];
+var logger = function (value){
+  console.log(value);
+}
 
-range.forEach(oddOrEven(number)) //['odd', 'even', 'odd', 'even','odd', 'even'];
+range.forEach(oddOrEven(number)) //['1','2','3','4','5','6'];
 ```
 
 
