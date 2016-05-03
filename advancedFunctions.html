@@ -839,11 +839,13 @@ They can be saved to variables:</p>
 
 <span class="pl-k">var</span> <span class="pl-en">oddOrEven</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">array</span>){
   <span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-smi">array</span>.<span class="pl-c1">length</span>; i<span class="pl-k">++</span>){
-    array[i] <span class="pl-k">=</span> <span class="pl-en">ifThen</span>(isEven, evenString, oddString, array[i]); 
+    array[i] <span class="pl-k">=</span> <span class="pl-en">ifThen</span>(isEven, double, triple, array[i]); 
   }
+
+  <span class="pl-k">return</span> array; 
 }
 
-<span class="pl-en">oddOrEven</span>(range)<span class="pl-c">//[3, 4, 9, 8', 15, 12']</span></pre></div>
+<span class="pl-en">oddOrEven</span>(range)<span class="pl-c">//[3, 4, 9, 8, 15, 12]</span></pre></div>
 
 <p>Let's take an example using forEach.  forEach is a native method of arrays that takes a callback function as an argument. The callback is called at each iteration with the current element of the array.  <em>Note</em> The callback is also passed the index and collection as optional arguments. </p>
 
