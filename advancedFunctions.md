@@ -97,14 +97,13 @@ Higher order functions either
 It is often desirable to create generalized functions which take callback functions. We can use these generalized functions, often called **utility functions**, to compose higher order functions which do more specific tasks.
 
 ```javascript
+var doMathSoIDontHaveTo = function(n, func){ return func(n); };
+
 var increment = function(n){ return n + 1; };
 
 var square = function(n){ return n*n; };
 
-var doMathSoIDontHaveTo = function(n, func){ return func(n); };
-
 doMathSoIDontHaveTo(5, square);
-
 doMathSoIDontHaveTo(4, increment);
 ```
 
@@ -113,7 +112,7 @@ doMathSoIDontHaveTo(4, increment);
 Here's another example:
 
 ```javascript
-var ifEven = function(condition, isTrue, isFalse, arg){
+var ifThen = function(condition, isTrue, isFalse, arg){
   if(condition (arg)){
     isTrue(arg);
   } else {
@@ -127,7 +126,7 @@ var isFalse = function(number){ return "odd"};
 
 var oddOrEven = function(array){
   for (var i = 0; i < array.length; i++){
-  	array[i] = ifEven(number); 
+  	array[i] = ifThen(number); 
   }
 }
 
