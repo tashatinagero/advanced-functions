@@ -34,8 +34,9 @@
 5. Write a function that takes an array and a function as arguments and calls that function on every value in the array, and replaces the original value with the return value of the callback function: 
 
    ```javascript
-   input: [
-   output: [2, 4, 3, 12]
+   var doubler = function(value){return value * 2};
+   input: [1,2,3,4,5], doubler
+   output: [2,4,6,8,10]
    ```
 
 6. Refactor that function so that instead of altering the input array, it returns a new array of transformed values. 
