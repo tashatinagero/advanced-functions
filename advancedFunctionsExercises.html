@@ -755,8 +755,9 @@ output<span class="pl-k">:</span> [<span class="pl-c1">2</span>, <span class="pl
 <li>
 <p>Write a function that takes an array and a function as arguments and calls that function on every value in the array, and replaces the original value with the return value of the callback function: </p>
 
-<div class="highlight highlight-source-js"><pre>input<span class="pl-k">:</span> [
-output<span class="pl-k">:</span> [<span class="pl-c1">2</span>, <span class="pl-c1">4</span>, <span class="pl-c1">3</span>, <span class="pl-c1">12</span>]</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-en">doubler</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">value</span>){<span class="pl-k">return</span> value <span class="pl-k">*</span> <span class="pl-c1">2</span>};
+input<span class="pl-k">:</span> [<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>], doubler
+output<span class="pl-k">:</span> [<span class="pl-c1">2</span>,<span class="pl-c1">4</span>,<span class="pl-c1">6</span>,<span class="pl-c1">8</span>,<span class="pl-c1">10</span>]</pre></div>
 </li>
 <li><p>Refactor that function so that instead of altering the input array, it returns a new array of transformed values. </p></li>
 </ol>
