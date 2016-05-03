@@ -15,3 +15,6 @@
 
 [Closure Exercises](closureExercises.html)
 
+#####Re-implementing Underscore
+[Re-implementing Underscore](implementingUnderscore.html)
+

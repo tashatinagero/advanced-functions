@@ -721,29 +721,32 @@ pre {
   position: relative;
   border-color: #4078c0;
 }
-</style><title>index</title></head><body><article class="markdown-body"><h1>
-<a id="user-content-functional-programming" class="anchor" href="#functional-programming" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Functional Programming</h1>
+</style><title>implementingUnderscore</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-re-implementing-underscore" class="anchor" href="#re-implementing-underscore" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Re-Implementing Underscore</h1>
 
-<h5>
-<a id="user-content-advanced-functions" class="anchor" href="#advanced-functions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Advanced Functions</h5>
+<p>Re-implement the following methods from underscore. You can reference the Underscore documentation for what they do as well as example usage. Underscore offers optional arguments for some of these methods. In those cases, follow the instructions here, rather than the Underscore documentation. </p>
 
-<p><a href="/Users/Zan/Code/hack-reactor/remote-prep/advanced-functions/advancedFunctions.html">Advanced Functions</a></p>
+<ol>
+<li><p><code>_.each</code> takes a collection and an iterator function and calls the <code>iterator(value, key, collection)</code> for each element of collection. It should accept both arrays and objects</p></li>
+<li><p><code>_.indexOf</code>   takes an array and a target value. It returns the index at which value can be found in the array, or -1 if value is not present in the array. Use <code>_.each</code> in your implementation</p></li>
+<li><p><code>_.filter</code> takes a collection and a predicate function, also known as a truth test. Return an array of all elements of the collection that pass the truth test, ie return a truthy value from the predicate function. Consider reusing <code>_.each</code> here. </p></li>
+<li><p><code>_.reject</code> works similiarly to <code>_.filter</code> but returns an array of all elements that don't pass the truth test. Use <code>_.filter</code> in your implementation.</p></li>
+<li><p><code>_.uniq</code> produces a duplicate free version of an array. Use <code>_.filter</code> and <code>_.indexOf</code> in your implementation.</p></li>
+<li><p><code>_.map</code> works a lot like <code>_.each</code>. It takes a collection and iterator, and calls the iterator on every element of the array. However, <code>_.map</code> returns an results array of the transformed values. </p></li>
+<li><p><code>_.pluck</code> takes an array of objects and returns an array of the values of a certain property in it. Ex. take an array of people objects and return an array of just their ages. Use <code>_.map</code> in your implementation.</p></li>
+<li><p><code>_.reduce</code> reduces an array or object to a single value by repetitively calling <code>iterator(accumulator, item)</code> for each item.  <code>accumulator</code> should be
+ the return value of the previous iterator call. Reduce takes a collection, an iterator, and an optional third argument of a starting value. Where no starting value is provided, the first element is used as the starting value and the iterator is not  called on the first value. </p></li>
+<li><p><code>_.every</code> determines whether all ements of a collection pass a truth test. It takes a collection and a predicate function. Use <code>_.reduce</code> in your implementation.</p></li>
+<li>
+<p><code>_.some</code> determines whether some eleements of a collection pass a truth test. It takes a collection and a predicate function. You could use <code>_.reduce</code> here, but there is a clever way to re-use <code>_.every</code>. </p>
 
-<p><a href="/Users/Zan/Code/hack-reactor/remote-prep/advanced-functions/advancedFunctionsExercises.html">Advanced Functions Exercises</a></p>
+<p>​</p>
 
-<h5>
-<a id="user-content-scope" class="anchor" href="#scope" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Scope</h5>
+<p>​</p>
 
-<p><a href="/Users/Zan/Code/hack-reactor/remote-prep/advanced-functions/scope/SpecRunner.html">Scope Test Runner</a>
-<a href="/Users/Zan/Code/hack-reactor/remote-prep/advanced-functions/scope/scopeExercises.html">Test Runner Instructions</a></p>
+<p>​</p>
 
-<h5>
-<a id="user-content-closure" class="anchor" href="#closure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Closure</h5>
-
-<p><a href="/Users/Zan/Code/hack-reactor/remote-prep/advanced-functions/closureExercises.html">Closure Exercises</a></p>
-
-<h5>
-<a id="user-content-re-implementing-underscore" class="anchor" href="#re-implementing-underscore" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Re-implementing Underscore</h5>
-
-<p><a href="implementingUnderscore.html">Re-implementing Underscore</a></p>
+<p>​</p>
+</li>
+</ol>
 </article></body></html>
